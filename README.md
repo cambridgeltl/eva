@@ -1,6 +1,6 @@
 # EVA: Entity Visual Alignment
 
-![EVA logo](./eva_logo_banner.png)
+![EVA logo](./EVA_logo.png)
 
 This repo holds code for reproducing models presented in our paper: *Visual Pivoting for (Unsupervised) Entity Alignment* [\[arxiv\]](https://arxiv.org/pdf/2009.13603.pdf) at AAAI 2021.
 
