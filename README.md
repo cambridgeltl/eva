@@ -4,14 +4,13 @@
 
 This repo holds code for reproducing models presented in our paper: *Visual Pivoting for (Unsupervised) Entity Alignment* [\[arxiv\]](https://arxiv.org/pdf/2009.13603.pdf) at AAAI 2021.
 
-
 ## Citation
 ```bibtex
 @inproceedings{liu2021eva,
-	  title={Visual Pivoting for (Unsupervised) Entity Alignment,
-		author={Liu, Fangyu and Chen, Muhao and Roth, Dan and Collier, Nigel},
-		booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
-		year={2021}
+	title={Visual Pivoting for (Unsupervised) Entity Alignment,
+	author={Liu, Fangyu and Chen, Muhao and Roth, Dan and Collier, Nigel},
+	booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+	year={2021}
 }
 ```
 
