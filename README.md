@@ -22,6 +22,9 @@ Download the used data (DBP15k, DWY15 along with precomputed features) from [dro
 
 The raw images are to be uploaded soon...
 
+## Environment
+The code is tested with python 3.7 and torch 1.7.0.
+
 ## Use EVA
 Run the full model on DBP15k:
 ```console
