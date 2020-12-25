@@ -115,15 +115,12 @@ def main():
 
     weight_raw = torch.tensor([1.0,1.0,1.0,1.0], requires_grad=True, device=device)
 
-    # if unsupervised? use image to obtain links
-    #"""
     if args.unsup:
+        # if unsupervised? use image to obtain links
         l_img_f = img_features[left_ents] # left images
         r_img_f = img_features[right_ents] # right images
 
-        #print (l_img_f.shape, r_img_f.shape)
         img_sim = l_img_f.mm(r_img_f.t())
-        #print (img_sim.shape)
         topk = args.unsup_k
         two_d_indices = get_topk_indices(img_sim, topk*100)
         del l_img_f, r_img_f, img_sim
@@ -141,14 +138,12 @@ def main():
             if count == topk: 
                 break
 
-        #"""
         count = 0.0
         for link in visual_links: 
             if link in ills:
                 count = count + 1
         print ("%.2f%% in true links" % (count/len(visual_links)*100))
         print ("visual links length: %d" % (len(visual_links)))
-        #exit()
         train_ill = np.array(visual_links, dtype=np.int32)
     else:
         # if supervised

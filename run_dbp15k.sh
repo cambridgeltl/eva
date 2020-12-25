@@ -1,6 +1,5 @@
-# running full model on FR-EN
-CUDA_VISIBLE_DEVICES=$1 python3 run.py \
-	--file_dir data/DBP15K/$3 \
+CUDA_VISIBLE_DEVICES=$1 python3 run_dbp15k.py \
+	--file_dir data/DBP15K/$3 \ # $3 = fr_en, ja_en or zh_en
 	--rate 0.3 \
 	--lr .0005 \
 	--epochs 1000 \
