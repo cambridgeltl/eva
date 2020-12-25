@@ -1,5 +1,5 @@
 CUDA_VISIBLE_DEVICES=$1 python3 run_dwy15k.py \
-	--file_dir ../EMNLP2020_code_submission/data/DWY_data/dbp_wd_15k_V2/mapping/0_3 \
+	--file_dir data/DWY_data/dbp_wd_15k_V2/mapping/0_3 \
 	--rate 0.3 \
 	--lr .0005 \
 	--epochs 1000 \

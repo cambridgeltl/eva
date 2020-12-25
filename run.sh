@@ -1,6 +1,6 @@
 # running full model on FR-EN
 CUDA_VISIBLE_DEVICES=$1 python3 run.py \
-	--file_dir data/DBP15K/fr_en \
+	--file_dir data/DBP15K/$3 \
 	--rate 0.3 \
 	--lr .0005 \
 	--epochs 1000 \

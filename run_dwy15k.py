@@ -372,11 +372,9 @@ def main():
         del joint_emb, gph_emb, img_emb, rel_emb, att_emb, suf_emb
 
         # print weights
-        with open("weights_5_norm.csv", "a") as myfile:
-            myfile.write("%.5f\t%.5f\t%.5f\t%.5f\t%.5f\n" % (w_normalized[0].item(),w_normalized[1].item(),\
-                w_normalized[2].item(),w_normalized[3].item(), w_normalized[4].item()))
-
-
+        #with open("weights_5_norm.csv", "a") as myfile:
+        #    myfile.write("%.5f\t%.5f\t%.5f\t%.5f\t%.5f\n" % (w_normalized[0].item(),w_normalized[1].item(),\
+        #        w_normalized[2].item(),w_normalized[3].item(), w_normalized[4].item()))
         
         # semi-supervised learning
         if epoch >= args.il_start and (epoch+1) % args.semi_learn_step == 0 and args.il:
