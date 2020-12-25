@@ -2,7 +2,7 @@ CUDA_VISIBLE_DEVICES=$1 python3 run_dwy15k.py \
 	--file_dir data/DWY_data/dbp_wd_15k_V$3/mapping/0_3 \
 	--rate 0.3 \
 	--lr .0005 \
-	--epochs 1000 \
+	--epochs 500 \
 	--wo_NNS \
 	--wo_K \
 	--hidden_units 400,400,200 \
@@ -11,6 +11,4 @@ CUDA_VISIBLE_DEVICES=$1 python3 run_dwy15k.py \
 	--check_point 50  \
 	--bsize 7500  \
 	--semi_learn_step 5 \
-	--il \
-	--il_start 500 \
 	--seed $2

@@ -12,6 +12,6 @@ CUDA_VISIBLE_DEVICES=$1 python3 run_dbp15k.py \
 	--csls \
 	--csls_k 3 \
 	--seed $2 \
-#	--unsup \
-#	--unsup_k 3000
+	--unsup \
+	--unsup_k 6000
 	

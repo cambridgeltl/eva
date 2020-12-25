@@ -30,42 +30,26 @@ def main():
     parser.add_argument("--file_dir", type=str, default="data/DBP15K/zh_en", required=False, help="input dataset file directory, ('data/DBP15K/zh_en', 'data/DWY100K/dbp_wd')")
     parser.add_argument("--rate", type=float, default=0.3, help="training set rate")
 
-    parser.add_argument("--save", default="", help="the output dictionary of the model and embedding. (should be created manually)")
     parser.add_argument("--cuda", action="store_true", default=True, help="whether to use cuda or not")
-
     parser.add_argument("--seed", type=int, default=2021, help="random seed")
     parser.add_argument("--epochs", type=int, default=1000, help="number of epochs to train")
     parser.add_argument("--check_point", type=int, default=100, help="check point")
-
     parser.add_argument("--hidden_units", type=str, default="128,128,128", help="hidden units in each hidden layer(including in_dim and out_dim), splitted with comma")
     parser.add_argument("--heads", type=str, default="2,2", help="heads in each gat layer, splitted with comma")
     parser.add_argument("--instance_normalization", action="store_true", default=False, help="enable instance normalization")
-
     parser.add_argument("--lr", type=float, default=0.005, help="initial learning rate")
     parser.add_argument("--weight_decay", type=float, default=0, help="weight decay (L2 loss on parameters)")
     parser.add_argument("--dropout", type=float, default=0.0, help="dropout rate for layers")
     parser.add_argument("--attn_dropout", type=float, default=0.0, help="dropout rate for gat layers")
     parser.add_argument("--dist", type=int, default=2, help="L1 distance or L2 distance. ('1', '2')")
-
-    parser.add_argument("--margin_CG", type=int, default=3, help="margin for cross-graph model")
-    parser.add_argument("--k_CG", type=int, default=25, help="negtive sampling number for cross-graph model")
-    parser.add_argument("--update_num", type=int, default=5, help="number of epoch for updating negtive samples")
-
-    parser.add_argument("--wo_K", action="store_true", default=False, help="baseline w/o Knowledge embedding model")
-    parser.add_argument("--wo_NNS", action="store_true", default=False, help="baseline w/o NNS")
-
     parser.add_argument("--csls", action="store_true", default=False, help="use CSLS for inference")
     parser.add_argument("--csls_k", type=int, default=10, help="top k for csls")
-
     parser.add_argument("--il", action="store_true", default=False, help="Iterative learning?")
     parser.add_argument("--semi_learn_step", type=int, default=10, help="If IL, what's the update step?")
     parser.add_argument("--il_start", type=int, default=500, help="If Il, when to start?")
-
     parser.add_argument("--bsize", type=int, default=7500, help="batch size")
-
     parser.add_argument("--unsup", action="store_true", default=False)
     parser.add_argument("--unsup_k", type=int, default=1000, help="|visual seed|")
-
     #parser.add_argument("--long_tail_analysis", action="store_true", default=False)
     parser.add_argument("--lta_split", type=int, default=0, help="split in {0,1,2,3,|splits|-1}")
 
@@ -76,8 +60,6 @@ def main():
     if args.cuda and torch.cuda.is_available():
         torch.cuda.manual_seed(args.seed)
     device = torch.device("cuda" if args.cuda and torch.cuda.is_available() else "cpu")
-
-    K_CG = args.k_CG
 
     # Load data
     lang_list = [1, 2]
