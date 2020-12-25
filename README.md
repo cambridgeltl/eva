@@ -24,7 +24,7 @@ The raw images are to be uploaded soon...
 
 ## Use EVA
 Run the full model on DBP15k:
-```bash
+```console
 ./run_dbp15k.sh 0 2020 fr_en
 ```
 where `0` specifies the GPU device, `2020` is a random seed and `fr_en` sets the language pair.
