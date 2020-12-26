@@ -18,15 +18,13 @@ This repo holds code for reproducing models presented in our paper: *Visual Pivo
 
 ## Data
 
-Download the used data (DBP15k, DWY15 along with precomputed features) from [here (dropbox)](https://www.dropbox.com/sh/5jteio17gfzp3xc/AACeXmsMEYts0O5_0Cuva7lPa?dl=0) and place under `data/`.
+Download the used data (DBP15k, DWY15 along with precomputed features) from [here (dropbox)](https://www.dropbox.com/sh/5jteio17gfzp3xc/AACeXmsMEYts0O5_0Cuva7lPa?dl=0) (1.3GB after unzipping) and place under `data/`. 
 
-The raw images of entities appeared in DBP15k and DWY15k can be dowbloaded [here (dropbox)](). All images are saved as title-image pairs in dictionaries and can be accessed with the following code:
-```ipython
-en_images = pickle.load(open("image_resources/en_dbp15k_link_img_dict_full.pkl",'rb'))
-print (len(en_images))
-
-key = "http://dbpedia.org/page/University_of_Pennsylvania"
-display(en_images[key])
+[optional] The raw images of entities appeared in DBP15k and DWY15k can be downloaded [here (dropbox)](https://www.dropbox.com/sh/rnvtnjhymbu8wh0/AACONryOmrNvoCkir2R8Dwxha?dl=0) (58GB after unzipping). All images are saved as title-image pairs in dictionaries and can be accessed with the following code:
+```python
+import pickle
+zh_images = pickle.load(open("eva_image_resources/dbp15k/zh_dbp15k_link_img_dict_full.pkl",'rb'))
+print(en_images["http://zh.dbpedia.org/resource/香港有線電視"].size)
 ```
 
 ## Environment
