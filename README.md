@@ -9,7 +9,7 @@ This repo holds code for reproducing models presented in our paper: *Visual Pivo
 ## Citation
 ```bibtex
 @inproceedings{liu2021eva,
-	title={Visual Pivoting for (Unsupervised) Entity Alignment,
+	title={Visual Pivoting for (Unsupervised) Entity Alignment},
 	author={Liu, Fangyu and Chen, Muhao and Roth, Dan and Collier, Nigel},
 	booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
 	year={2021}
