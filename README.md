@@ -4,7 +4,7 @@
 
 Entity Alignment is the task of linking entities with the same real-world identity from different knowledge graphs. EVA is a set of algorithms that leverage images in knowledge graphs for facilitating Entity Alignment.
 
-This repo holds code for reproducing models presented in our paper: *Visual Pivoting for (Unsupervised) Entity Alignment* [\[arxiv\]](https://arxiv.org/pdf/2009.13603.pdf) at AAAI 2021.
+This repo holds code for reproducing models presented in our paper: *Visual Pivoting for (Unsupervised) Entity Alignment* [\[arxiv\]](https://arxiv.org/pdf/2009.13603.pdf)[\[aaai\]](https://ojs.aaai.org/index.php/AAAI/article/view/16550) at AAAI 2021.
 
 
 ## Data
@@ -16,7 +16,7 @@ Download the used data (DBP15k, DWY15 along with precomputed features) from [her
 import pickle
 zh_images = pickle.load(open("eva_image_resources/dbp15k/zh_dbp15k_link_img_dict_full.pkl",'rb'))
 print(en_images["http://zh.dbpedia.org/resource/香港有線電視"].size)
-``:
+```
 
 ## Environment
 The code is tested with python 3.7 and torch 1.7.0.
