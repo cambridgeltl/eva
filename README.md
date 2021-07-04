@@ -4,7 +4,7 @@
 
 Entity Alignment is the task of linking entities with the same real-world identity from different knowledge graphs. EVA is a set of algorithms that leverage images in knowledge graphs for facilitating Entity Alignment.
 
-This repo holds code for reproducing models presented in our paper: *Visual Pivoting for (Unsupervised) Entity Alignment* [\[arxiv\]](https://arxiv.org/pdf/2009.13603.pdf)[\[aaai\]](https://ojs.aaai.org/index.php/AAAI/article/view/16550) at AAAI 2021.
+This repo holds code for reproducing models presented in our paper: **_Visual Pivoting for (Unsupervised) Entity Alignment_** [\[arxiv\]](https://arxiv.org/pdf/2009.13603.pdf)[\[aaai\]](https://ojs.aaai.org/index.php/AAAI/article/view/16550) at AAAI 2021.
 
 
 ## Data
