@@ -1,10 +1,8 @@
-CUDA_VISIBLE_DEVICES=$1 python3 run_dwy15k.py \
+CUDA_VISIBLE_DEVICES=$1 python3 src/run_dwy15k.py \
 	--file_dir data/DWY_data/dbp_wd_15k_V$3/mapping/0_3 \
 	--rate 0.3 \
 	--lr .0005 \
 	--epochs 500 \
-	--wo_NNS \
-	--wo_K \
 	--hidden_units 400,400,200 \
 	--csls \
 	--csls_k 3 \

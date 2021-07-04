@@ -1,4 +1,4 @@
-CUDA_VISIBLE_DEVICES=$1 python3 run_dbp15k.py \
+CUDA_VISIBLE_DEVICES=$1 python3 src/run_dbp15k.py \
 	--file_dir data/DBP15K/$3 \
 	--rate 0.3 \
 	--lr .0005 \
