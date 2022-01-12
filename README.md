@@ -45,6 +45,9 @@ data/DWY_data/
 │   ├── ...
 ├── dbp_wd_15k_V2/: dense split
 │   ├── ...
+data/pkls/
+├── dbpedia_wikidata_15k_norm_GA_id_img_feature_dict.pkl: mapping between entity names to image features for DWY15k (normal)
+│   ├── ...
 ```
 
 ## Environment
