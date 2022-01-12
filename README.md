@@ -11,12 +11,44 @@ This repo holds code for reproducing models presented in our paper: **_Visual Pi
 
 Download the used data (DBP15k, DWY15 along with precomputed features) from [here (dropbox)](https://www.dropbox.com/sh/5jteio17gfzp3xc/AACeXmsMEYts0O5_0Cuva7lPa?dl=0) (1.3GB after unzipping) and place under `data/`. 
 
+
+[original sources of DBP15k and DWY15k]
+- [DBP15k](http://ws.nju.edu.cn/jape/)
+- [DWY15k](https://github.com/nju-websoft/RSN/blob/master/entity-alignment-full-data.7z)
+
 [optional] The raw images of entities appeared in DBP15k and DWY15k can be downloaded [here (dropbox)](https://www.dropbox.com/sh/rnvtnjhymbu8wh0/AACONryOmrNvoCkir2R8Dwxha?dl=0) (108GB after unzipping). All images are saved as title-image pairs in dictionaries and can be accessed with the following code:
 ```python
 import pickle
 zh_images = pickle.load(open("eva_image_resources/dbp15k/zh_dbp15k_link_img_dict_full.pkl",'rb'))
 print(en_images["http://zh.dbpedia.org/resource/香港有線電視"].size)
 ```
+
+### Dataset Descriptions
+
+We use the DWY15k dataset as an example (files not used in experiments are omitted).
+
+```
+data/DWY_data/
+├── dwy15k_dense_sf_vec.npy: surface form vectors encoded by fastText (dense split)
+├── dwy15k_norm_sf_vec.npy: surface form vectors encoded by fastText (normal split)
+├── dbp_wd_15k_V1/: normal split
+│   ├── mapping/
+│   │   ├── 0_3/: the third split (used across all experiments)
+│   │   │   ├── ent_ids_1: mapping between entity names and ids for graph 1
+│   │   │   ├── ent_ids_1: mapping between entity names and ids for graph 2
+│   │   │   ├── rel_ids_1: mapping between relation names and ids for graph 1
+│   │   │   ├── rel_ids_1: mapping between relation names and ids for graph 1
+│   │   │   ├── ill_ent_ids: inter-lingual links (specified by ids)
+│   │   │   ├── triples_1: a list of tuples in the form of (head, relation, tail) for graph 1 (specified by ids)
+│   │   │   ├── triples_2: a list of tuples in the form of (head, relation, tail) for graph 2 (specified by ids)
+│   │   │   ├── ...
+│   │   ├── ...
+│   ├── ...
+├── dbp_wd_15k_V2/: dense split
+│   ├── ...
+```
+
+
 
 ## Environment
 The code is tested with python 3.7 and torch 1.7.0.

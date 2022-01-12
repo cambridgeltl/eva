@@ -46,6 +46,20 @@ def sparse_mx_to_torch_sparse_tensor(sparse_mx):
 
 
 def read_raw_data(file_dir, l=[1, 2]):
+    """
+    Read DBP15k/DWY15k dataset.
+    Parameters
+    ----------
+    file_dir: root of the dataset.
+    Returns
+    -------
+    ent2id_dict : A dict mapping from entity name to ids
+    ills: inter-lingual links (specified by ids)
+    triples: a list of tuples (ent_id_1, relation_id, ent_id_2)
+    r_hs: a dictionary containing mappings of relations to a list of entities that are head entities of the relation
+    r_ts: a dictionary containing mappings of relations to a list of entities that are tail entities of the relation
+    ids: all ids as a list
+    """
     print('loading raw data...')
     def read_file(file_paths):
         tups = []
