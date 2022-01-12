@@ -11,8 +11,7 @@ This repo holds code for reproducing models presented in our paper: **_Visual Pi
 
 Download the used data (DBP15k, DWY15 along with precomputed features) from [here (dropbox)](https://www.dropbox.com/sh/5jteio17gfzp3xc/AACeXmsMEYts0O5_0Cuva7lPa?dl=0) (1.3GB after unzipping) and place under `data/`. 
 
-
-[original sources of DBP15k and DWY15k]
+Original sources of DBP15k and DWY15k:
 - [DBP15k](http://ws.nju.edu.cn/jape/)
 - [DWY15k](https://github.com/nju-websoft/RSN/blob/master/entity-alignment-full-data.7z)
 
@@ -35,9 +34,9 @@ data/DWY_data/
 │   ├── mapping/
 │   │   ├── 0_3/: the third split (used across all experiments)
 │   │   │   ├── ent_ids_1: mapping between entity names and ids for graph 1
-│   │   │   ├── ent_ids_1: mapping between entity names and ids for graph 2
+│   │   │   ├── ent_ids_2: mapping between entity names and ids for graph 2
 │   │   │   ├── rel_ids_1: mapping between relation names and ids for graph 1
-│   │   │   ├── rel_ids_1: mapping between relation names and ids for graph 1
+│   │   │   ├── rel_ids_2: mapping between relation names and ids for graph 2
 │   │   │   ├── ill_ent_ids: inter-lingual links (specified by ids)
 │   │   │   ├── triples_1: a list of tuples in the form of (head, relation, tail) for graph 1 (specified by ids)
 │   │   │   ├── triples_2: a list of tuples in the form of (head, relation, tail) for graph 2 (specified by ids)
@@ -47,8 +46,6 @@ data/DWY_data/
 ├── dbp_wd_15k_V2/: dense split
 │   ├── ...
 ```
-
-
 
 ## Environment
 The code is tested with python 3.7 and torch 1.7.0.
